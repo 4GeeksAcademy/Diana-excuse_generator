@@ -1,6 +1,6 @@
 window.onload = () => {
   var first = "A ";
-  var adj = [
+  var subject = [
     "two headed ",
     "nuclear ",
     "angry ",
@@ -15,12 +15,12 @@ window.onload = () => {
     "jogger ",
     "racoon ",
     "dog ",
-    "merchant ",
+    "theater musician ",
     "driver ",
-    "comedian ",
+    "doctor ",
     "pinecone "
   ];
-  var action = [
+  var verb = [
     "took my ",
     "kick my ",
     "yelled at my ",
@@ -42,30 +42,30 @@ window.onload = () => {
     "phone ",
     "sandwich "
   ];
-  var where = [
+  var place = [
     "on the street",
-    "in my brother's house",
-    "in my driveway",
-    "in front of the school",
-    "near to Target",
-    "near the toilet",
-    "at the police station"
+    "in my girlfriend's house",
+    "in my neighborhood",
+    "in front of the museum",
+    "near to Walmart",
+    "near the kitchen",
+    "at the airport"
   ];
 
-  // declaring random variables
-  var rdm1 = Math.floor(Math.random() * adj.length);
-  var rdm2 = Math.floor(Math.random() * noun.length);
-  var rdm3 = Math.floor(Math.random() * action.length);
-  var rdm4 = Math.floor(Math.random() * possetion.length);
-  var rdm5 = Math.floor(Math.random() * where.length);
+
+  var random1 = Math.floor(Math.random() * subject.length);
+  var random2 = Math.floor(Math.random() * noun.length);
+  var random3 = Math.floor(Math.random() * verb.length);
+  var random4 = Math.floor(Math.random() * possetion.length);
+  var random5 = Math.floor(Math.random() * place.length);
 
   document.querySelector("#button").addEventListener("click", () => {
     document.querySelector("#excuse").innerHTML =
       first +
-      adj[rdm1] +
-      noun[rdm2] +
-      action[rdm3] +
-      possetion[rdm4] +
-      where[rdm5];
+      subject[random1] +
+      noun[random2] +
+      verb[random3] +
+      possetion[random4] +
+      place[random5];
   });
 };
