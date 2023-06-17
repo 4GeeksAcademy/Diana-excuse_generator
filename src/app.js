@@ -62,13 +62,13 @@ let generateExcuse = () => {
   ];
 
 
-  let random1 = Math.floor(Math.random() * subject.length);
-  let random2 = Math.floor(Math.random() * noun.length);
-  let random3 = Math.floor(Math.random() * verb.length);
-  let random4 = Math.floor(Math.random() * possetion.length);
-  let random5 = Math.floor(Math.random() * place.length);
+  let subjectRandom = Math.floor(Math.random() * subject.length);
+  let nounRandom = Math.floor(Math.random() * noun.length);
+  let verbRandom = Math.floor(Math.random() * verb.length);
+  let possetionRandom = Math.floor(Math.random() * possetion.length);
+  let placeRandom = Math.floor(Math.random() * place.length);
 
-  return (first + subject[random1] + noun[random2] + verb[random3] + possetion[random4] + place[random5]);
+  return (first + subject[subjectRandom] + noun[nounRandom] + verb[verbRandom] + possetion[possetionRandom] + place[placeRandom]);
 
 };
 
