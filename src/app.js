@@ -1,6 +1,15 @@
 window.onload = () => {
-  var first = "A ";
-  var subject = [
+
+  document.querySelector("#button").addEventListener("click", () => {
+    document.querySelector("#excuse").innerHTML = generateExcuse();
+  });
+
+};
+
+let generateExcuse = () => {
+
+  let first = "A ";
+  let subject = [
     "two headed ",
     "nuclear ",
     "angry ",
@@ -11,7 +20,7 @@ window.onload = () => {
     "slow ",
     "old "
   ];
-  var noun = [
+  let noun = [
     "jogger ",
     "racoon ",
     "dog ",
@@ -20,7 +29,7 @@ window.onload = () => {
     "doctor ",
     "pinecone "
   ];
-  var verb = [
+  let verb = [
     "took my ",
     "kick my ",
     "yelled at my ",
@@ -30,7 +39,7 @@ window.onload = () => {
     "bit my ",
     "hit my "
   ];
-  var possetion = [
+  let possetion = [
     "hand ",
     "car ",
     "watch ",
@@ -42,7 +51,7 @@ window.onload = () => {
     "phone ",
     "sandwich "
   ];
-  var place = [
+  let place = [
     "on the street",
     "in my girlfriend's house",
     "in my neighborhood",
@@ -53,19 +62,13 @@ window.onload = () => {
   ];
 
 
-  var random1 = Math.floor(Math.random() * subject.length);
-  var random2 = Math.floor(Math.random() * noun.length);
-  var random3 = Math.floor(Math.random() * verb.length);
-  var random4 = Math.floor(Math.random() * possetion.length);
-  var random5 = Math.floor(Math.random() * place.length);
+  let random1 = Math.floor(Math.random() * subject.length);
+  let random2 = Math.floor(Math.random() * noun.length);
+  let random3 = Math.floor(Math.random() * verb.length);
+  let random4 = Math.floor(Math.random() * possetion.length);
+  let random5 = Math.floor(Math.random() * place.length);
 
-  document.querySelector("#button").addEventListener("click", () => {
-    document.querySelector("#excuse").innerHTML =
-      first +
-      subject[random1] +
-      noun[random2] +
-      verb[random3] +
-      possetion[random4] +
-      place[random5];
-  });
+  return (first + subject[random1] + noun[random2] + verb[random3] + possetion[random4] + place[random5]);
+
 };
+
